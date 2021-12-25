@@ -1,15 +1,23 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etherscan Editor Bookmarklet</title>
 <style>
 body {
+/*
   display: flex;
   justify-content: center;
   align-items: center;
+  */
+  margin: 0;
+  padding: 100px 10px;
+  box-sizing: border-box;
   font-family: Sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
+  color: rgba(0,0,0,0.8);
 }
-a {
+a.btn {
   display: inline-block;
   padding: 5px 10px;
   border-radius:20px;
@@ -18,12 +26,22 @@ a {
   background: rgba(0,0,0,0.1);
   margin-bottom: 10px;
 }
+a {
+  color: black;
+}
+img {
+  max-width: 800px;
+  box-sizing: border-box;
+  width: 100%;
+}
 </style>
 </head>
 <body>
 <div>
-<a href='javascript:(function(){ if(/etherscan\.io/.test(location.href)) { location.href = location.href.replace(/etherscan\.io/, "etherscan.deth.net"); } })()'>Etherscan VSCode</a>
-<div>Drag this button to the bookmarks bar</div>
+  <a class='btn' href='javascript:(function(){ if(/etherscan\.io/.test(location.href)) { location.href = location.href.replace(/etherscan\.io/, "etherscan.deth.net"); } })()'>Etherscan VSCode</a>
+  <div>☝️ <br>drag this button to the bookmarks bar<br>(powered by <a href="https://deth.net">deth.net</a>)</div>
+  <br><br>
+  <img src='deth.gif'>
 </div>
 </body>
 </html>
